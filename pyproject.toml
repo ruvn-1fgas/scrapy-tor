@@ -1,0 +1,36 @@
+[project]
+name = "scrapy-tor"
+version = "2026.10.14.1"
+description = "Scrapy downloader middleware that sends requests through Tor"
+readme = "README.md"
+authors = [{ name = "Rustam Vanchugov" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+keywords = ["scrapy", "tor", "middleware", "socks", "proxy"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Scrapy",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "Scrapy>=2.13,<3.0",
+    "requests[socks]>=2.32",
+]
+
+[project.urls]
+Homepage = "https://github.com/ruvn-1fgas/scrapy-tor"
+Issues = "https://github.com/ruvn-1fgas/scrapy-tor/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scrapy_tor*"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
